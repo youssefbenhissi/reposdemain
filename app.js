@@ -1,3 +1,9 @@
+const mongoose = require("mongoose");
+
+mongoose.connect("mongodb://localhost:27017/revsion_5sim1")
+  .then(()=>{ console.log("db connected"); })
+  .catch((exc)=> console.log(exc));
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');

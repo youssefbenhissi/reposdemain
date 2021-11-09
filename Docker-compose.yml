@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+    my-application-container:
+        image: "testing_api_5sim3"
+        build: .
+        ports:
+            - "8080:3000"
+        depends_on:
+            - "mongo-db-container"
+
+    mongo-db-container:
+        image: "mongo"
+        ports: 
+            - "27020:27017"
+        volumes:
+            - database:/database-db
+volumes:
+    database: 
